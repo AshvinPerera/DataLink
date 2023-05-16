@@ -1,11 +1,11 @@
 from PyQt6.QtWidgets import QFrame, QVBoxLayout, QLineEdit, QListWidget, QListWidgetItem, QAbstractItemView
 from PyQt6.QtCore import Qt
 
-from ReportBuilder.GUI.Node import Node
-from ReportBuilder.GUI.ImportNodes import CSVInputNode
-from ReportBuilder.GUI.CombineNodes import StackNode
-from ReportBuilder.GUI.NodeEditor import NodeEditor
-from ReportBuilder.GUI.NodeProperties import NodeProperties
+from DataLink.GUI.Node import Node
+from DataLink.GUI.ImportNodes import CSVInputNode
+from DataLink.GUI.CombineNodes import StackNode
+from DataLink.GUI.NodeEditor import NodeEditor
+from DataLink.GUI.NodeProperties import NodeProperties
 
 
 class NodeBrowser:

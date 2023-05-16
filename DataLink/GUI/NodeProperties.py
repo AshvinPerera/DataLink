@@ -1,8 +1,8 @@
 from PyQt6.QtWidgets import QWidget, QFrame, QVBoxLayout, QStackedLayout, QLabel
 from PyQt6.QtCore import QObjectCleanupHandler
 
-from ReportBuilder.GUI.Enums import PropertyUI
-from ReportBuilder.GUI.ImportUI import ImportUI
+from DataLink.GUI.Enums import PropertyUI
+from DataLink.GUI.ImportUI import ImportUI
 
 
 class NodeProperties:

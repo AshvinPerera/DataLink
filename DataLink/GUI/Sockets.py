@@ -4,8 +4,8 @@ from PyQt6.QtCore import Qt, QRectF, QPointF
 from enum import Enum
 from typing import Any
 
-from ReportBuilder.GUI.Edge import Edge
-from ReportBuilder.GUI.Enums import SocketType
+from DataLink.GUI.Edge import Edge
+from DataLink.GUI.Enums import SocketType
 
 
 class Socket:

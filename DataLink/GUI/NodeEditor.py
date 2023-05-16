@@ -3,14 +3,14 @@ from PyQt6.QtCore import Qt, QRectF, QLine, QEvent, QPointF
 from PyQt6.QtGui import QPainter, QColor, QPen, QMouseEvent, QDragEnterEvent, QDropEvent, QDragMoveEvent
 import math
 
-from ReportBuilder.GUI.Enums import State
-from ReportBuilder.GUI.Node import Node
-from ReportBuilder.GUI.ImportNodes import CSVInputNode
-from ReportBuilder.GUI.CombineNodes import StackNode
-from ReportBuilder.GUI.Sockets import Socket
-from ReportBuilder.GUI.Edge import Edge
-from ReportBuilder.GUI.NodeProperties import NodeProperties
-from ReportBuilder.GUI.Input import InputManager
+from DataLink.GUI.Enums import State
+from DataLink.GUI.Node import Node
+from DataLink.GUI.ImportNodes import CSVInputNode
+from DataLink.GUI.CombineNodes import StackNode
+from DataLink.GUI.Sockets import Socket
+from DataLink.GUI.Edge import Edge
+from DataLink.GUI.NodeProperties import NodeProperties
+from DataLink.GUI.Input import InputManager
 
 
 class NodeEditor:

@@ -6,7 +6,7 @@ from PyQt6.QtGui import QPainter, QColor, QPen, QPainterPath
 from PyQt6.QtCore import Qt, QPointF
 from typing import Optional
 
-from ReportBuilder.GUI.Enums import SocketType
+from DataLink.GUI.Enums import SocketType
 
 
 class Edge:

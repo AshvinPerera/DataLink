@@ -3,8 +3,8 @@ from PyQt6.QtWidgets import (
 )
 from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QIcon
-from ReportBuilder.GUI.DataManager import CSVImportManager, SchemaManager, ValidationManager
-from ReportBuilder.GUI.Helper import (
+from DataLink.GUI.DataManager import CSVImportManager, SchemaManager, ValidationManager
+from DataLink.GUI.Helper import (
     horizontal_line, Logger, error_dialog, creator_options, create_file_dialog, csv_search,
     directory_search_button,  edit_button, create_button, save_data_button,
     PandasModel, ComboBoxSelection, DTypeEnforcer

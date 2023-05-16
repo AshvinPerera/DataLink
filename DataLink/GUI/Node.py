@@ -6,9 +6,9 @@ from PyQt6.QtGui import QPainterPath, QPen, QBrush, QColor, QFont, QPainter, QPi
 from PyQt6.QtCore import Qt, QPointF, QRectF
 from typing import Any, Callable
 
-from ReportBuilder.GUI.Sockets import Socket, SocketType
-from ReportBuilder.GUI.NodeProperties import NodeProperties
-from ReportBuilder.GUI.Helper import get_absolute_filepath
+from DataLink.GUI.Sockets import Socket, SocketType
+from DataLink.GUI.NodeProperties import NodeProperties
+from DataLink.GUI.Helper import get_absolute_filepath
 
 
 class Node:
