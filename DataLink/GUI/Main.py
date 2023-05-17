@@ -11,9 +11,7 @@ if __name__ == '__main__':
     run()
 """
 
-from PyQt6.QtWidgets import (
-    QApplication, QMainWindow, QMenuBar, QWidget, QTabWidget, QMenu, QVBoxLayout, QHBoxLayout, QFrame, QLabel
-)
+from PyQt6.QtWidgets import QApplication, QMainWindow, QMenuBar, QWidget, QMenu, QVBoxLayout, QHBoxLayout
 from PyQt6.QtGui import QIcon
 import sys
 
