@@ -1,3 +1,11 @@
+"""
+Node Module: PyQt6-based Node
+-----------------------------
+This Python script defines two classes (Node and NodeView) for building the functional and graphical representation of
+a node with PyQt6, a popular Python binding of the Qt library.
+"""
+
+
 from PyQt6.QtWidgets import (
     QGraphicsItem, QGraphicsTextItem, QGraphicsPixmapItem, QStyleOptionGraphicsItem, QGraphicsSceneMouseEvent
 )
@@ -11,6 +19,31 @@ from DataLink.GUI.Support.Helper import get_absolute_filepath
 
 
 class Node:
+    """
+    Description
+    -----------
+    The Node class serves as a representation of a single node in a node editor. This node may have several properties
+    and may be connected with other nodes through input and output sockets.
+
+    Node Attributes
+    ---------------
+    index: The index position of this node in the node editor.
+    node_properties: This node's access to the NodeProperties UI interface that allows it to display its properties to
+                     the user.
+    node_editor: The parent node editor to which this node belongs.
+    title: The title or name of the node (default: "Undefined").
+    icon_path: The path to the icon image for the node. The path is processed through the get_absolute_filepath
+               function.
+    node_view: An instance of NodeView that represents the graphical view of the node in the node editor.
+    inputs: A list to hold input sockets for the node.
+    outputs: A list to hold output sockets for the node.
+    socket_spacing: The distance between each socket on the node (default: 22).
+
+    Node Methods
+    ------------
+    __init__: Initializes the Node with its properties and graphical view.
+    get_socket_position: Returns the x, y position of a socket on the node.
+    """
     def __init__(
             self,
             node_editor,
@@ -33,7 +66,21 @@ class Node:
         self.outputs = []
         self.socket_spacing = 22
 
-    def get_socket_position(self, index: int, socket_type: SocketType):
+    def get_socket_position(self, index: int, socket_type: SocketType) -> tuple:
+        """
+        Description
+        -----------
+        Returns the x, y position of a socket on the node.
+
+        The vertical distance between 2 sockets is dependent on the socket spacing (22)
+
+        Parameters
+        ----------
+        index: int
+            the index position of the socket of type SocketType in the nodes list of sockets
+        socket_type: SocketType
+            identifies if the socket is an input socket or an output socket
+        """
         x = 6 if socket_type == SocketType.INPUT else (self.node_view.width - 14)
         y = (
                 self.node_view.title_height +
@@ -45,6 +92,33 @@ class Node:
 
 
 class NodeView(QGraphicsItem):
+    """
+    The NodeView class is a subclass of QGraphicsItem, providing a custom graphics item that represents a node in a
+    PyQt6 scene.
+
+    NodeView Attributes
+    -------------------
+    node: The Node that this NodeView visually represents.
+    _title, title_item: The title of the node and the corresponding QGraphicsTextItem.
+    _icon, icon_item: The icon of the node and the corresponding QGraphicsPixmapItem.
+    _start_position: Used to store the initial position of a node when a mouse drag operation begins.
+    width, height, edge_size: The dimensions of the node view and the size of the rounded edges.
+    Various QPen, QBrush, QFont, QColor instances: These attributes are used to style the node.
+
+    NodeView Methods
+    ----------------
+    __init__: Initializes the NodeView and sets its graphical properties.
+    setup: Initializes the title and icon of the node.
+    boundingRect: Returns the bounding rectangle of the node.
+    initialize_title: Initializes the title text item of the node.
+    initialize_icon: Initializes the icon pixmap item of the node.
+    get_title, set_title: Getter and setter for the title of the node.
+    paint: Paints the node item within a QPainter context.
+    mousePressEvent, mouseMoveEvent, mouseReleaseEvent: Overrides to handle mouse events, allowing for node selection
+                                                        and dragging.
+    itemChange: Overrides to handle changes to QGraphicsItem properties, such as selection status.
+    update_edges: Updates the position of all edges connected to the node's sockets.
+    """
     def __init__(self, node: Node, position: QPointF, title: str, width: int, height: int, size: float, icon_path: str):
         super().__init__()
         self.node = node
