@@ -2,10 +2,9 @@ from PyQt6.QtWidgets import QGraphicsView, QGraphicsItem
 from PyQt6.QtCore import Qt, QEvent, QPointF
 from PyQt6.QtGui import QMouseEvent
 
-from DataLink.GUI.Enums import State
-from DataLink.GUI.Node import NodeView
-from DataLink.GUI.Sockets import SocketView
-from DataLink.GUI.Edge import Edge
+from DataLink.GUI.Support.Enums import State
+from DataLink.GUI.Core.Sockets import SocketView
+from DataLink.GUI.Core.Edge import Edge
 
 
 class InputManager:

@@ -1,14 +1,13 @@
 from PyQt6.QtWidgets import (
-    QGraphicsItem, QGraphicsTextItem, QGraphicsPixmapItem, QStyleOptionGraphicsItem, QGraphicsSceneMouseEvent,
-    QApplication
+    QGraphicsItem, QGraphicsTextItem, QGraphicsPixmapItem, QStyleOptionGraphicsItem, QGraphicsSceneMouseEvent
 )
 from PyQt6.QtGui import QPainterPath, QPen, QBrush, QColor, QFont, QPainter, QPixmap
 from PyQt6.QtCore import Qt, QPointF, QRectF
-from typing import Any, Callable
+from typing import Any
 
-from DataLink.GUI.Sockets import Socket, SocketType
-from DataLink.GUI.NodeProperties import NodeProperties
-from DataLink.GUI.Helper import get_absolute_filepath
+from DataLink.GUI.Core.Sockets import SocketType
+from DataLink.GUI.Core.NodeProperties import NodeProperties
+from DataLink.GUI.Support.Helper import get_absolute_filepath
 
 
 class Node:

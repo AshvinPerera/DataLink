@@ -1,11 +1,10 @@
 from PyQt6.QtWidgets import (
-    QWidget, QLabel, QPushButton, QComboBox, QTextEdit, QDialog, QTableWidget, QTableWidgetItem, QLineEdit, QCompleter,
-    QVBoxLayout, QHBoxLayout)
-from PyQt6.QtCore import Qt, QStringListModel, QModelIndex
+    QWidget, QLabel, QPushButton, QComboBox, QTextEdit, QDialog, QTableWidget, QTableWidgetItem, QLineEdit, QVBoxLayout, QHBoxLayout)
+from PyQt6.QtCore import Qt
 from typing import Any
 
-from DataLink.GUI.Helper import horizontal_line
-from DataLink.GUI.DataStorage import FilterData, FilterStorage
+from DataLink.GUI.Support.Helper import horizontal_line
+from DataLink.GUI.Support.DataStorage import FilterData, FilterStorage
 
 
 class ColumnSelector(QDialog):

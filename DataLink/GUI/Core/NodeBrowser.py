@@ -1,11 +1,7 @@
 from PyQt6.QtWidgets import QFrame, QVBoxLayout, QLineEdit, QListWidget, QListWidgetItem, QAbstractItemView
-from PyQt6.QtCore import Qt
 
-from DataLink.GUI.Node import Node
-from DataLink.GUI.ImportNodes import CSVInputNode
-from DataLink.GUI.CleanerNodes import ReplaceNode
-from DataLink.GUI.NodeEditor import NodeEditor
-from DataLink.GUI.NodeProperties import NodeProperties
+from DataLink.GUI.NodeFunction.ImportNodes import CSVInputNode
+from DataLink.GUI.NodeFunction.CleanerNodes import ReplaceNode
 
 
 class NodeBrowser:

@@ -1,11 +1,10 @@
 from PyQt6.QtCore import QPointF
 
-from DataLink.GUI.Node import Node
-from DataLink.GUI.Sockets import Socket
-from DataLink.GUI.Enums import PropertyUI
-from DataLink.GUI.NodeProperties import NodeProperties
-from DataLink.GUI.DataManager import CSVImportManager, SchemaManager, ValidationManager
-from DataLink.GUI.ImportUI import ImportUI
+from DataLink.GUI.Core.Node import Node
+from DataLink.GUI.Core.Sockets import Socket
+from DataLink.GUI.Support.Enums import PropertyUI
+from DataLink.GUI.Core.NodeProperties import NodeProperties
+from DataLink.GUI.Support.DataManager import CSVImportManager, SchemaManager, ValidationManager
 
 
 class CSVInputNode(Node):
@@ -25,7 +24,7 @@ class CSVInputNode(Node):
             index,
             node_properties,
             position,
-            '\\icons\\import-csv.png',
+            '../icons/import-csv.png',
             title,
             width,
             height

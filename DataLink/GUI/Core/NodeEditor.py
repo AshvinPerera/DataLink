@@ -1,16 +1,15 @@
-from PyQt6.QtWidgets import QWidget, QGraphicsView, QGraphicsScene, QScrollBar, QListWidget
-from PyQt6.QtCore import Qt, QRectF, QLine, QEvent, QPointF
+from PyQt6.QtWidgets import QGraphicsView, QGraphicsScene, QListWidget
+from PyQt6.QtCore import Qt, QRectF, QLine, QPointF
 from PyQt6.QtGui import QPainter, QColor, QPen, QMouseEvent, QDragEnterEvent, QDropEvent, QDragMoveEvent
 import math
 
-from DataLink.GUI.Enums import State
-from DataLink.GUI.Node import Node
-from DataLink.GUI.ImportNodes import CSVInputNode
-from DataLink.GUI.CleanerNodes import ReplaceNode
-from DataLink.GUI.Sockets import Socket
-from DataLink.GUI.Edge import Edge
-from DataLink.GUI.NodeProperties import NodeProperties
-from DataLink.GUI.Input import InputManager
+from DataLink.GUI.Support.Enums import State
+from DataLink.GUI.Core.Node import Node
+from DataLink.GUI.NodeFunction.ImportNodes import CSVInputNode
+from DataLink.GUI.NodeFunction.CleanerNodes import ReplaceNode
+from DataLink.GUI.Core.Edge import Edge
+from DataLink.GUI.Core.NodeProperties import NodeProperties
+from DataLink.GUI.Core.Input import InputManager
 
 
 class NodeEditor:

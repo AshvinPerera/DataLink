@@ -1,12 +1,11 @@
 from PyQt6.QtWidgets import (
-    QWidget, QGraphicsPathItem, QStyleOptionGraphicsItem, QGraphicsItem,
-    QGraphicsSceneDragDropEvent, QGraphicsSceneMouseEvent
+    QWidget, QGraphicsPathItem, QStyleOptionGraphicsItem, QGraphicsItem
 )
 from PyQt6.QtGui import QPainter, QColor, QPen, QPainterPath
 from PyQt6.QtCore import Qt, QPointF
 from typing import Optional
 
-from DataLink.GUI.Enums import SocketType
+from DataLink.GUI.Support.Enums import SocketType
 
 
 class Edge:

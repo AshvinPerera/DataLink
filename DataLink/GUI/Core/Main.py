@@ -15,9 +15,9 @@ from PyQt6.QtWidgets import QApplication, QMainWindow, QMenuBar, QWidget, QMenu,
 from PyQt6.QtGui import QIcon
 import sys
 
-from DataLink.GUI.NodeProperties import NodeProperties
-from DataLink.GUI.NodeEditor import NodeEditor
-from DataLink.GUI.NodeBrowser import NodeBrowser
+from DataLink.GUI.Core.NodeProperties import NodeProperties
+from DataLink.GUI.Core.NodeEditor import NodeEditor
+from DataLink.GUI.Core.NodeBrowser import NodeBrowser
 
 
 class ApplicationWindow(QMainWindow):

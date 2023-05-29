@@ -1,9 +1,7 @@
 from PyQt6.QtWidgets import (
-    QMainWindow, QWidget, QLineEdit, QHBoxLayout, QVBoxLayout, QGridLayout, QPushButton, QLabel, QTableView
+    QWidget, QVBoxLayout, QPushButton
 )
-from PyQt6.QtCore import Qt
-from PyQt6.QtGui import QIcon
-from DataLink.GUI.DataManager import DataManager
+from DataLink.GUI.Support.DataManager import DataManager
 
 
 def create_stack_data_tab(data_manager: DataManager) -> QWidget:

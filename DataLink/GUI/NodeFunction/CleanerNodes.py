@@ -1,11 +1,10 @@
 from PyQt6.QtCore import QPointF
 
-from DataLink.GUI.Node import Node
-from DataLink.GUI.Sockets import Socket
-from DataLink.GUI.NodeProperties import NodeProperties
-from DataLink.GUI.DataStorage import FilterStorage, FilterData, PandasStorage
-from DataLink.GUI.Enums import SocketType, PropertyUI
-from DataLink.GUI.FilterUI import FilterUI
+from DataLink.GUI.Core.Node import Node
+from DataLink.GUI.Core.Sockets import Socket
+from DataLink.GUI.Core.NodeProperties import NodeProperties
+from DataLink.GUI.Support.DataStorage import FilterStorage, PandasStorage
+from DataLink.GUI.Support.Enums import SocketType, PropertyUI
 
 
 class ReplaceNode(Node):
