@@ -14,3 +14,4 @@ class SocketType(Enum):
 class PropertyUI(IntEnum):
     NO_UI = 0
     IMPORT_CSV_UI = 1
+    CLEANER_REPLACE_UI = 2

@@ -3,7 +3,7 @@ from PyQt6.QtCore import Qt
 
 from DataLink.GUI.Node import Node
 from DataLink.GUI.ImportNodes import CSVInputNode
-from DataLink.GUI.CombineNodes import StackNode
+from DataLink.GUI.CleanerNodes import ReplaceNode
 from DataLink.GUI.NodeEditor import NodeEditor
 from DataLink.GUI.NodeProperties import NodeProperties
 
@@ -11,8 +11,8 @@ from DataLink.GUI.NodeProperties import NodeProperties
 class NodeBrowser:
     def __init__(self):
         self.node_creators = {
-            'Data Importer': CSVInputNode,
-            'Stack': StackNode
+            'CSV Importer': CSVInputNode,
+            'Replace Data': ReplaceNode
         }
         self._frame = BrowserFrame(list(self.node_creators.keys()))
 

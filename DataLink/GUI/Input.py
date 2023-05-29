@@ -132,6 +132,7 @@ def end_socket(input_manager: InputManager, node_editor, item: QGraphicsItem) ->
                     (True)
             ):
                 node_editor.add_edge(Edge(input_manager.start_socket, input_manager.end_socket))
+                input_manager.end_socket.node.on_edge_connect(input_manager.start_socket)
                 print('assign end socket')
             return True
     return False

@@ -1,2 +1,2 @@
 from .GUI import Main
-from .DataTool import Preprocessing
+from .DataTool import Preprocess

@@ -3,6 +3,7 @@ from PyQt6.QtCore import QObjectCleanupHandler
 
 from DataLink.GUI.Enums import PropertyUI
 from DataLink.GUI.ImportUI import ImportUI
+from DataLink.GUI.FilterUI import FilterUI
 
 
 class NodeProperties:
@@ -20,13 +21,15 @@ class NodeProperties:
             self.old_args = []
         else:
             self.old_args = [*args]
-        self.frame.set_panel(int(ui_type), *args)
+        self.frame.set_panel(self.ui_list.index(ui_type), *args)
 
     def create_ui(self, ui_type: PropertyUI):
         if ui_type not in self.ui_list:
             self.ui_list.append(ui_type)
             if ui_type == PropertyUI.IMPORT_CSV_UI:
                 self.frame.create_panel(int(ui_type), ImportUI())
+            if ui_type == PropertyUI.CLEANER_REPLACE_UI:
+                self.frame.create_panel(int(ui_type), FilterUI())
 
 
 class PropertyFrame(QFrame):
@@ -52,6 +55,7 @@ class PropertyFrame(QFrame):
 
     def create_panel(self, index: int, properties: QWidget):
         self.property_layout.insertWidget(index, properties)
+        print('a')
 
     def set_panel(self, index: int, *args):
         self.property_layout.setCurrentIndex(index)
@@ -62,4 +66,3 @@ class PropertyFrame(QFrame):
     def save_panel(self, *args):
         if self.property_layout.currentIndex() != 0:
             self.property_layout.currentWidget().save_panel(*args)
-

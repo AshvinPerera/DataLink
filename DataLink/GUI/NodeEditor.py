@@ -6,7 +6,7 @@ import math
 from DataLink.GUI.Enums import State
 from DataLink.GUI.Node import Node
 from DataLink.GUI.ImportNodes import CSVInputNode
-from DataLink.GUI.CombineNodes import StackNode
+from DataLink.GUI.CleanerNodes import ReplaceNode
 from DataLink.GUI.Sockets import Socket
 from DataLink.GUI.Edge import Edge
 from DataLink.GUI.NodeProperties import NodeProperties
@@ -53,11 +53,11 @@ class NodeEditor:
         return self.node_editor_view
 
     def handle_node(self, node_name: str, node_position: QPointF):
-        if node_name == 'Data Importer':
+        if node_name == 'CSV Importer':
             self.add_node(CSVInputNode(self, self.node_index, self.node_properties, node_position))
             self.node_index += 1
-        elif node_name == 'Stack':
-            self.add_node(StackNode(self, self.node_index, self.node_properties, node_position))
+        elif node_name == 'Replace Data':
+            self.add_node(ReplaceNode(self, self.node_index, self.node_properties, node_position))
             self.node_index += 1
 
 

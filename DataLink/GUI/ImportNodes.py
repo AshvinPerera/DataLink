@@ -15,7 +15,7 @@ class CSVInputNode(Node):
             index: int,
             node_properties: NodeProperties,
             position: QPointF,
-            title: str = 'Data Import',
+            title: str = 'CSV Import',
             width: int = 120,
             height: int = 65
     ):
@@ -33,7 +33,6 @@ class CSVInputNode(Node):
         self.csv_manager = CSVImportManager()
         self.schema_manager = SchemaManager()
         self.validation_manager = ValidationManager()
-        self.import_ui = ImportUI()
         self.setup()
         self.setup_sockets()
 

@@ -1,9 +1,14 @@
+"""
+
+"""
 import sys
 from typing import Any
-import DataLink.DataTool.Preprocessing as pr
+
+import DataLink.DataTool.Preprocess as pr
 
 
 class DataManager:
+    """ Base data structure for storing data in  """
     def __init__(self):
         self.logger = None
         self.bad_filename = False
@@ -145,4 +150,5 @@ class CSVImportManager(DataManager):
             return
 
     def get_columns(self):
-        return self._dataset.columns
+        if self._dataset is not None:
+            return self._dataset.columns
